@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "stairwell"
-version = "0.0.2"
+version = "0.0.3"
 description = "A Python client for the Stairwell platform."
 authors = ["Andrew Liu <liu@stairwell.com>"]
 license = "Apache 2.0"
@@ -10,7 +10,7 @@ repository = "https://github.com/stairwell-inc/stairwell-python"
 documentation = "https://docs.stairwell.com/"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.8"
 requests = "^2.31.0"
 
 
