@@ -18,7 +18,6 @@ If the python package is hosted on a repository, you can install directly using:
 
 ```sh
 pip install git+https://github.com/stairwell-inc/stairwell-python.git
-<<<<<<< HEAD
 ```
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/stairwell-inc/stairwell-python.git`)
 
@@ -36,25 +35,6 @@ python setup.py install --user
 ```
 (or `sudo python setup.py install` to install the package for all users)
 
-=======
-```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/stairwell-inc/stairwell-python.git`)
-
-Then import the package:
-```python
-import stairwell_openapi_client
-```
-
-### Setuptools
-
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
-
-```sh
-python setup.py install --user
-```
-(or `sudo python setup.py install` to install the package for all users)
-
->>>>>>> 45e1daa222fd34c9cdd2ab51fbda62c83dfde249
 Then import the package:
 ```python
 import stairwell_openapi_client
