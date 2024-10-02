@@ -23,7 +23,7 @@ print ListAssetsResponse.to_json()
 # convert the object into a dict
 list_assets_response_dict = list_assets_response_instance.to_dict()
 # create an instance of ListAssetsResponse from a dict
-list_assets_response_form_dict = list_assets_response.from_dict(list_assets_response_dict)
+list_assets_response_from_dict = ListAssetsResponse.from_dict(list_assets_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

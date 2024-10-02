@@ -26,8 +26,8 @@ class ListAssetsResponse(BaseModel):
     """
     ListAssetsResponse contains the list of assets and next_page_token.  # noqa: E501
     """
-    assets: Optional[conlist(Asset)] = Field(None, description="The list of assets")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="The token for the next page of assets")
+    assets: Optional[conlist(Asset)] = Field(default=None, description="The list of assets")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="The token for the next page of assets")
     __properties = ["assets", "nextPageToken"]
 
     class Config:

@@ -25,7 +25,7 @@ class Detection(BaseModel):
     """
     Detection includes data about malware family, YARA, behavior etc.  # noqa: E501
     """
-    family: Optional[StrictStr] = Field(None, description="Malware family for this detection")
+    family: Optional[StrictStr] = Field(default=None, description="Malware family for this detection")
     __properties = ["family"]
 
     class Config:

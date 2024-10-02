@@ -23,7 +23,7 @@ print ObjectSignature.to_json()
 # convert the object into a dict
 object_signature_dict = object_signature_instance.to_dict()
 # create an instance of ObjectSignature from a dict
-object_signature_form_dict = object_signature.from_dict(object_signature_dict)
+object_signature_from_dict = ObjectSignature.from_dict(object_signature_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

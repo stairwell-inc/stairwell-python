@@ -25,9 +25,9 @@ class RegistryKeyAction(BaseModel):
     """
     RegistryKeyActions define the registry keys which were accessed/modified during detonation  # noqa: E501
     """
-    registry_key: Optional[StrictStr] = Field(None, alias="registryKey", description="The registry key path")
-    action: Optional[StrictStr] = Field(None, description="Action performed on the registry key")
-    registry_key_hive: Optional[StrictStr] = Field(None, alias="registryKeyHive", description="Logical group of keys, subkeys, and values related to the registry key")
+    registry_key: Optional[StrictStr] = Field(default=None, alias="registryKey", description="The registry key path")
+    action: Optional[StrictStr] = Field(default=None, description="Action performed on the registry key")
+    registry_key_hive: Optional[StrictStr] = Field(default=None, alias="registryKeyHive", description="Logical group of keys, subkeys, and values related to the registry key")
     __properties = ["registryKey", "action", "registryKeyHive"]
 
     @validator('action')

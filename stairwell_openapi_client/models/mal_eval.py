@@ -25,9 +25,9 @@ class MalEval(BaseModel):
     """
     Malware Evaluation result.  # noqa: E501
     """
-    labels: Optional[conlist(StrictStr)] = Field(None, description="Labels derived from the malware evalation.")
-    probability_bucket: Optional[StrictStr] = Field(None, alias="probabilityBucket", description="Confidence that the label applies on the object.")
-    severity: Optional[StrictStr] = Field(None, description="Severity of malware detected.")
+    labels: Optional[conlist(StrictStr)] = Field(default=None, description="Labels derived from the malware evalation.")
+    probability_bucket: Optional[StrictStr] = Field(default=None, alias="probabilityBucket", description="Confidence that the label applies on the object.")
+    severity: Optional[StrictStr] = Field(default=None, description="Severity of malware detected.")
     __properties = ["labels", "probabilityBucket", "severity"]
 
     @validator('probability_bucket')

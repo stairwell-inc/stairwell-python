@@ -25,10 +25,10 @@ class Comment(BaseModel):
     """
     Comment represents a key value pairing applied to particular entity. Only one of object, rule or asset may be specified.  # noqa: E501
     """
-    body: StrictStr = Field(..., description="The body of the comment.")
-    email: Optional[StrictStr] = Field(None, description="The email of the user who made the comment.")
-    create_time: Optional[datetime] = Field(None, alias="createTime", description="The time when the comment was added.")
-    environment: StrictStr = Field(..., description="the environment in which this tag will live.")
+    body: StrictStr = Field(default=..., description="The body of the comment.")
+    email: Optional[StrictStr] = Field(default=None, description="The email of the user who made the comment.")
+    create_time: Optional[datetime] = Field(default=None, alias="createTime", description="The time when the comment was added.")
+    environment: StrictStr = Field(default=..., description="the environment in which this tag will live.")
     __properties = ["body", "email", "createTime", "environment"]
 
     class Config:

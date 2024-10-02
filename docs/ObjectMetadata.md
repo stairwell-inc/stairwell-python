@@ -41,7 +41,7 @@ print ObjectMetadata.to_json()
 # convert the object into a dict
 object_metadata_dict = object_metadata_instance.to_dict()
 # create an instance of ObjectMetadata from a dict
-object_metadata_form_dict = object_metadata.from_dict(object_metadata_dict)
+object_metadata_from_dict = ObjectMetadata.from_dict(object_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

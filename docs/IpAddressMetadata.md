@@ -24,7 +24,7 @@ print IpAddressMetadata.to_json()
 # convert the object into a dict
 ip_address_metadata_dict = ip_address_metadata_instance.to_dict()
 # create an instance of IpAddressMetadata from a dict
-ip_address_metadata_form_dict = ip_address_metadata.from_dict(ip_address_metadata_dict)
+ip_address_metadata_from_dict = IpAddressMetadata.from_dict(ip_address_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -27,7 +27,7 @@ class ObjectVariant(BaseModel):
     Contains metadata about an object and its similarity score to the original.  # noqa: E501
     """
     variant: Optional[ObjectMetadata] = None
-    similarity: Optional[Union[StrictFloat, StrictInt]] = Field(None, description="The similarity to the origin file in terms of a percentage.")
+    similarity: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The similarity to the origin file in terms of a percentage.")
     __properties = ["variant", "similarity"]
 
     class Config:

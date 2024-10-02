@@ -26,8 +26,8 @@ class ListObjectSightingsResponse(BaseModel):
     """
     Response type for ListObjectSightings RPCs.  # noqa: E501
     """
-    object_sightings: Optional[conlist(ObjectSighting)] = Field(None, alias="objectSightings", description="The sightings from the parent resource.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    object_sightings: Optional[conlist(ObjectSighting)] = Field(default=None, alias="objectSightings", description="The sightings from the parent resource.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["objectSightings", "nextPageToken"]
 
     class Config:

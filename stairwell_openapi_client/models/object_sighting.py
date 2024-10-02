@@ -25,12 +25,14 @@ class ObjectSighting(BaseModel):
     """
     A sighting of an object on a particular asset.  # noqa: E501
     """
-    sighting_time: Optional[datetime] = Field(None, alias="sightingTime", description="The timestamp at which the object was observed on the asset.")
-    environment: Optional[StrictStr] = Field(None, description="Environment in which the asset resides.")
-    asset: Optional[StrictStr] = Field(None, description="Asset resource name which the object was sighted on.")
-    filename: Optional[StrictStr] = Field(None, description="Name of file on disk.")
-    filepath: Optional[StrictStr] = Field(None, description="Path to file on disk.")
-    __properties = ["sightingTime", "environment", "asset", "filename", "filepath"]
+    sighting_time: Optional[datetime] = Field(default=None, alias="sightingTime", description="The timestamp at which the object was observed on the asset.")
+    environment: Optional[StrictStr] = Field(default=None, description="Environment in which the asset resides.")
+    asset: Optional[StrictStr] = Field(default=None, description="Asset resource name which the object was sighted on.")
+    filename: Optional[StrictStr] = Field(default=None, description="Name of file on disk.")
+    filepath: Optional[StrictStr] = Field(default=None, description="Path to file on disk.")
+    asset_name: Optional[StrictStr] = Field(default=None, alias="assetName", description="Name of the asset.")
+    parent_sha256: Optional[StrictStr] = Field(default=None, alias="parentSha256", description="Optional parent SHA265 if the object was packed.")
+    __properties = ["sightingTime", "environment", "asset", "filename", "filepath", "assetName", "parentSha256"]
 
     class Config:
         """Pydantic configuration"""
@@ -72,7 +74,9 @@ class ObjectSighting(BaseModel):
             "environment": obj.get("environment"),
             "asset": obj.get("asset"),
             "filename": obj.get("filename"),
-            "filepath": obj.get("filepath")
+            "filepath": obj.get("filepath"),
+            "asset_name": obj.get("assetName"),
+            "parent_sha256": obj.get("parentSha256")
         })
         return _obj
 

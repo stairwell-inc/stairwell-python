@@ -26,17 +26,17 @@ class Asset(BaseModel):
     """
     Asset represents any entity (usually a machine) which uploads objects to the Stairwell platform.  # noqa: E501
     """
-    name: Optional[StrictStr] = Field(None, description="The resource name of the asset.")
-    label: Optional[StrictStr] = Field(None, description="Label of the asset.")
-    create_time: Optional[datetime] = Field(None, alias="createTime", description="Creation time of the asset.")
-    last_checkin_time: Optional[datetime] = Field(None, alias="lastCheckinTime", description="Last time the asset made an RPC into the platform.")
-    environment: Optional[StrictStr] = Field(None, description="Environment that this asset lives in.")
-    forwarder_version: Optional[StrictStr] = Field(None, alias="forwarderVersion", description="Forwarder version of the form {major}.{minor}.{patch}")
-    mac_address: Optional[StrictStr] = Field(None, alias="macAddress", description="The media access control address specific to this asset.")
-    os: Optional[StrictStr] = Field(None, description="Operating system running on this asset.")
-    os_version: Optional[StrictStr] = Field(None, alias="osVersion", description="Operating system version of the form {major}.{minor}.{patch}")
-    tags: Optional[conlist(Tag)] = Field(None, description="Tags associated with this asset.")
-    upload_token: Optional[StrictStr] = Field(None, alias="uploadToken", description="Private authorization id and token for uploading to the asset")
+    name: Optional[StrictStr] = Field(default=None, description="The resource name of the asset.")
+    label: Optional[StrictStr] = Field(default=None, description="Label of the asset.")
+    create_time: Optional[datetime] = Field(default=None, alias="createTime", description="Creation time of the asset.")
+    last_checkin_time: Optional[datetime] = Field(default=None, alias="lastCheckinTime", description="Last time the asset made an RPC into the platform.")
+    environment: Optional[StrictStr] = Field(default=None, description="Environment that this asset lives in.")
+    forwarder_version: Optional[StrictStr] = Field(default=None, alias="forwarderVersion", description="Forwarder version of the form {major}.{minor}.{patch}")
+    mac_address: Optional[StrictStr] = Field(default=None, alias="macAddress", description="The media access control address specific to this asset.")
+    os: Optional[StrictStr] = Field(default=None, description="Operating system running on this asset.")
+    os_version: Optional[StrictStr] = Field(default=None, alias="osVersion", description="Operating system version of the form {major}.{minor}.{patch}")
+    tags: Optional[conlist(Tag)] = Field(default=None, description="Tags associated with this asset.")
+    upload_token: Optional[StrictStr] = Field(default=None, alias="uploadToken", description="Private authorization id and token for uploading to the asset")
     __properties = ["name", "label", "createTime", "lastCheckinTime", "environment", "forwarderVersion", "macAddress", "os", "osVersion", "tags", "uploadToken"]
 
     class Config:

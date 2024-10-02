@@ -25,7 +25,7 @@ print Comment.to_json()
 # convert the object into a dict
 comment_dict = comment_instance.to_dict()
 # create an instance of Comment from a dict
-comment_form_dict = comment.from_dict(comment_dict)
+comment_from_dict = Comment.from_dict(comment_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

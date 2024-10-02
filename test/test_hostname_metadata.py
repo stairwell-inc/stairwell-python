@@ -55,12 +55,6 @@ class TestHostnameMetadata(unittest.TestCase):
                         state = 'STATE_UNSPECIFIED', 
                         address = '', 
                         lookup_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
-                    ],
-                tags = [
-                    stairwell_openapi_client.models.tag.Tag(
-                        name = '', 
-                        value = '', 
-                        environment = '', )
                     ]
             )
         else:

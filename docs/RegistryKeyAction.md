@@ -24,7 +24,7 @@ print RegistryKeyAction.to_json()
 # convert the object into a dict
 registry_key_action_dict = registry_key_action_instance.to_dict()
 # create an instance of RegistryKeyAction from a dict
-registry_key_action_form_dict = registry_key_action.from_dict(registry_key_action_dict)
+registry_key_action_from_dict = RegistryKeyAction.from_dict(registry_key_action_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

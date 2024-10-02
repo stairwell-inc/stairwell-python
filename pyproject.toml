@@ -1,18 +1,16 @@
 [tool.poetry]
-name = "stairwell"
-version = "0.0.4"
-description = "A Python client for the Stairwell platform."
-authors = ["Andrew Liu <liu@stairwell.com>", "MJR <mjr@stairwell.com"]
-license = "Apache 2.0"
+name = "stairwell_openapi_client"
+version = "1.0.0"
+description = "Stairwell V1 HTTP APIs"
+authors = ["Stairwell <team@openapitools.org>"]
+license = "NoLicense"
 readme = "README.md"
-homepage = "https://stairwell.com/"
-repository = "https://github.com/stairwell-inc/stairwell-python"
-documentation = "https://docs.stairwell.com/"
+repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Stairwell V1 HTTP APIs"]
 include = ["stairwell_openapi_client/py.typed"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 
 urllib3 = ">= 1.25.3"
 python-dateutil = ">=2.8.2"

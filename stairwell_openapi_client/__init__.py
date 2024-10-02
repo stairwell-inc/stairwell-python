@@ -21,6 +21,8 @@ from stairwell_openapi_client.api.assets_api import AssetsApi
 from stairwell_openapi_client.api.hostnames_api import HostnamesApi
 from stairwell_openapi_client.api.ip_addresses_api import IpAddressesApi
 from stairwell_openapi_client.api.objects_api import ObjectsApi
+from stairwell_openapi_client.api.threat_reports_api import ThreatReportsApi
+from stairwell_openapi_client.api.triggers_service_api import TriggersServiceApi
 from stairwell_openapi_client.api.yara_rules_api import YaraRulesApi
 
 # import ApiClient
@@ -49,6 +51,9 @@ from stairwell_openapi_client.models.list_object_sightings_response import ListO
 from stairwell_openapi_client.models.list_object_variants_response import ListObjectVariantsResponse
 from stairwell_openapi_client.models.list_opinions_response import ListOpinionsResponse
 from stairwell_openapi_client.models.list_tags_response import ListTagsResponse
+from stairwell_openapi_client.models.list_threat_report_iocs_response import ListThreatReportIocsResponse
+from stairwell_openapi_client.models.list_threat_report_matches_response import ListThreatReportMatchesResponse
+from stairwell_openapi_client.models.list_trigger_matches_response import ListTriggerMatchesResponse
 from stairwell_openapi_client.models.list_yara_rules_response import ListYaraRulesResponse
 from stairwell_openapi_client.models.mal_eval import MalEval
 from stairwell_openapi_client.models.mitre_attack_ttp import MitreAttackTTP
@@ -61,6 +66,11 @@ from stairwell_openapi_client.models.object_variant import ObjectVariant
 from stairwell_openapi_client.models.opinion import Opinion
 from stairwell_openapi_client.models.registry_key_action import RegistryKeyAction
 from stairwell_openapi_client.models.tag import Tag
+from stairwell_openapi_client.models.threat_report import ThreatReport
+from stairwell_openapi_client.models.threat_report_ioc import ThreatReportIOC
+from stairwell_openapi_client.models.threat_report_match import ThreatReportMatch
+from stairwell_openapi_client.models.trigger_match import TriggerMatch
+from stairwell_openapi_client.models.trigger_match_condition import TriggerMatchCondition
 from stairwell_openapi_client.models.trigger_object_detonation_request import TriggerObjectDetonationRequest
 from stairwell_openapi_client.models.x509_certificate import X509Certificate
 from stairwell_openapi_client.models.yara_rule import YaraRule

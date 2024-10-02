@@ -25,11 +25,11 @@ class X509Certificate(BaseModel):
     """
     A representation of an x509 certificate.  # noqa: E501
     """
-    signature: Optional[StrictStr] = Field(None, description="An encoded hash representing the digital signature of the certificate.")
-    issuer: Optional[StrictStr] = Field(None, description="The common name of the issuer of this certificate.")
-    subject: Optional[StrictStr] = Field(None, description="The common name of the subject of this certificate.")
-    earliest_valid_time: Optional[datetime] = Field(None, alias="earliestValidTime", description="The earliest time where this certificate is valid.")
-    latest_valid_time: Optional[datetime] = Field(None, alias="latestValidTime", description="The latest time where this certificate is valid.")
+    signature: Optional[StrictStr] = Field(default=None, description="An encoded hash representing the digital signature of the certificate.")
+    issuer: Optional[StrictStr] = Field(default=None, description="The common name of the issuer of this certificate.")
+    subject: Optional[StrictStr] = Field(default=None, description="The common name of the subject of this certificate.")
+    earliest_valid_time: Optional[datetime] = Field(default=None, alias="earliestValidTime", description="The earliest time where this certificate is valid.")
+    latest_valid_time: Optional[datetime] = Field(default=None, alias="latestValidTime", description="The latest time where this certificate is valid.")
     __properties = ["signature", "issuer", "subject", "earliestValidTime", "latestValidTime"]
 
     class Config:

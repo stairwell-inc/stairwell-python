@@ -25,17 +25,17 @@ class Opinion(BaseModel):
     """
     Opinion represents a key value pairing applied to particular entity. Only one of object, rule or asset may be specified.  # noqa: E501
     """
-    verdict: StrictStr = Field(..., description="The opinion put on the entity.")
-    environment: StrictStr = Field(..., description="Environment the opinion is set in")
-    email: Optional[StrictStr] = Field(None, description="The email of the user who made the opinion.")
-    create_time: Optional[datetime] = Field(None, alias="createTime", description="The time when the opinion was added.")
+    verdict: StrictStr = Field(default=..., description="The opinion put on the entity.")
+    environment: StrictStr = Field(default=..., description="Environment the opinion is set in")
+    email: Optional[StrictStr] = Field(default=None, description="The email of the user who made the opinion.")
+    create_time: Optional[datetime] = Field(default=None, alias="createTime", description="The time when the opinion was added.")
     __properties = ["verdict", "environment", "email", "createTime"]
 
     @validator('verdict')
     def verdict_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('OPINION_VERDICT_UNSPECIFIED', 'NO_OPINION', 'TRUSTED', 'GRAYWARE', 'MALICIOUS'):
-            raise ValueError("must be one of enum values ('OPINION_VERDICT_UNSPECIFIED', 'NO_OPINION', 'TRUSTED', 'GRAYWARE', 'MALICIOUS')")
+        if value not in ('OPINION_VERDICT_UNSPECIFIED', 'NO_OPINION', 'TRUSTED', 'BENIGN', 'GRAYWARE', 'MALICIOUS'):
+            raise ValueError("must be one of enum values ('OPINION_VERDICT_UNSPECIFIED', 'NO_OPINION', 'TRUSTED', 'BENIGN', 'GRAYWARE', 'MALICIOUS')")
         return value
 
     class Config:

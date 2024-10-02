@@ -23,7 +23,7 @@ print ListOpinionsResponse.to_json()
 # convert the object into a dict
 list_opinions_response_dict = list_opinions_response_instance.to_dict()
 # create an instance of ListOpinionsResponse from a dict
-list_opinions_response_form_dict = list_opinions_response.from_dict(list_opinions_response_dict)
+list_opinions_response_from_dict = ListOpinionsResponse.from_dict(list_opinions_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

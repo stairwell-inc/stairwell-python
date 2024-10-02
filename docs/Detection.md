@@ -22,7 +22,7 @@ print Detection.to_json()
 # convert the object into a dict
 detection_dict = detection_instance.to_dict()
 # create an instance of Detection from a dict
-detection_form_dict = detection.from_dict(detection_dict)
+detection_from_dict = Detection.from_dict(detection_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

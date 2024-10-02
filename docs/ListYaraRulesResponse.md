@@ -23,7 +23,7 @@ print ListYaraRulesResponse.to_json()
 # convert the object into a dict
 list_yara_rules_response_dict = list_yara_rules_response_instance.to_dict()
 # create an instance of ListYaraRulesResponse from a dict
-list_yara_rules_response_form_dict = list_yara_rules_response.from_dict(list_yara_rules_response_dict)
+list_yara_rules_response_from_dict = ListYaraRulesResponse.from_dict(list_yara_rules_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

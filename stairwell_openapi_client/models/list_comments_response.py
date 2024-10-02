@@ -26,8 +26,8 @@ class ListCommentsResponse(BaseModel):
     """
     Response type for ListComments RPCs.  # noqa: E501
     """
-    comments: Optional[conlist(Comment)] = Field(None, description="The comments from the parent resource.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    comments: Optional[conlist(Comment)] = Field(default=None, description="The comments from the parent resource.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["comments", "nextPageToken"]
 
     class Config:

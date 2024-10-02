@@ -28,7 +28,7 @@ print YaraRule.to_json()
 # convert the object into a dict
 yara_rule_dict = yara_rule_instance.to_dict()
 # create an instance of YaraRule from a dict
-yara_rule_form_dict = yara_rule.from_dict(yara_rule_dict)
+yara_rule_from_dict = YaraRule.from_dict(yara_rule_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

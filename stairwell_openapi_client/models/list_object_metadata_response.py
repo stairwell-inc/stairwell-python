@@ -26,8 +26,8 @@ class ListObjectMetadataResponse(BaseModel):
     """
     Response type for ListObjectMetadata RPCs.  # noqa: E501
     """
-    object_metadatas: Optional[conlist(ObjectMetadata)] = Field(None, alias="objectMetadatas", description="The objects matching the specified filter.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    object_metadatas: Optional[conlist(ObjectMetadata)] = Field(default=None, alias="objectMetadatas", description="The objects matching the specified filter.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["objectMetadatas", "nextPageToken"]
 
     class Config:

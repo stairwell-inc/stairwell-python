@@ -23,7 +23,7 @@ print MitreAttackTTP.to_json()
 # convert the object into a dict
 mitre_attack_ttp_dict = mitre_attack_ttp_instance.to_dict()
 # create an instance of MitreAttackTTP from a dict
-mitre_attack_ttp_form_dict = mitre_attack_ttp.from_dict(mitre_attack_ttp_dict)
+mitre_attack_ttp_from_dict = MitreAttackTTP.from_dict(mitre_attack_ttp_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

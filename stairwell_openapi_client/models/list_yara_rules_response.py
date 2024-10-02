@@ -26,8 +26,8 @@ class ListYaraRulesResponse(BaseModel):
     """
     ListYaraRulesResponse contains a list of rules and the next page token.  # noqa: E501
     """
-    yara_rules: Optional[conlist(YaraRule)] = Field(None, alias="yaraRules", description="The rules from the parent resource.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    yara_rules: Optional[conlist(YaraRule)] = Field(default=None, alias="yaraRules", description="The rules from the parent resource.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["yaraRules", "nextPageToken"]
 
     class Config:

@@ -26,8 +26,8 @@ class ListObjectVariantsResponse(BaseModel):
     """
     Response type for ListObjectVariants RPCs.  # noqa: E501
     """
-    object_variants: Optional[conlist(ObjectVariant)] = Field(None, alias="objectVariants", description="The variants from the parent resource.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    object_variants: Optional[conlist(ObjectVariant)] = Field(default=None, alias="objectVariants", description="The variants from the parent resource.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["objectVariants", "nextPageToken"]
 
     class Config:

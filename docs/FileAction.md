@@ -23,7 +23,7 @@ print FileAction.to_json()
 # convert the object into a dict
 file_action_dict = file_action_instance.to_dict()
 # create an instance of FileAction from a dict
-file_action_form_dict = file_action.from_dict(file_action_dict)
+file_action_from_dict = FileAction.from_dict(file_action_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

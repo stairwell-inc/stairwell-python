@@ -26,8 +26,8 @@ class ListOpinionsResponse(BaseModel):
     """
     Response type for ListOpinions RPCs.  # noqa: E501
     """
-    opinions: Optional[conlist(Opinion)] = Field(None, description="The opinions from the parent resource.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    opinions: Optional[conlist(Opinion)] = Field(default=None, description="The opinions from the parent resource.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["opinions", "nextPageToken"]
 
     class Config:
