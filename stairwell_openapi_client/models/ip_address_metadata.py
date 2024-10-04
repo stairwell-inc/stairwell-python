@@ -26,9 +26,9 @@ class IpAddressMetadata(BaseModel):
     """
     IpAddress contains metadata relating to a particular IP address.  # noqa: E501
     """
-    name: Optional[StrictStr] = Field(None, description="The resource name of the IP address.")
-    ip_address: Optional[StrictStr] = Field(None, alias="ipAddress", description="Unique set of numbers assigned to each Internet or network device.")
-    tags: Optional[conlist(Tag)] = Field(None, description="Tags associated with this ip address.")
+    name: Optional[StrictStr] = Field(default=None, description="The resource name of the IP address.")
+    ip_address: Optional[StrictStr] = Field(default=None, alias="ipAddress", description="Unique set of numbers assigned to each Internet or network device.")
+    tags: Optional[conlist(Tag)] = Field(default=None, description="Tags associated with this ip address.")
     __properties = ["name", "ipAddress", "tags"]
 
     class Config:

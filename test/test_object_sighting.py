@@ -40,7 +40,9 @@ class TestObjectSighting(unittest.TestCase):
                 environment = '',
                 asset = '',
                 filename = '',
-                filepath = ''
+                filepath = '',
+                asset_name = '',
+                parent_sha256 = ''
             )
         else:
             return ObjectSighting(

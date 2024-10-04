@@ -24,7 +24,7 @@ print DNSLookupResult.to_json()
 # convert the object into a dict
 dns_lookup_result_dict = dns_lookup_result_instance.to_dict()
 # create an instance of DNSLookupResult from a dict
-dns_lookup_result_form_dict = dns_lookup_result.from_dict(dns_lookup_result_dict)
+dns_lookup_result_from_dict = DNSLookupResult.from_dict(dns_lookup_result_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

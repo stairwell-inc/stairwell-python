@@ -25,9 +25,9 @@ class Tag(BaseModel):
     """
     Tag represents a key value pairing applied to particular entity. Only one of object, rule or asset may be specified.  # noqa: E501
     """
-    name: Optional[StrictStr] = Field(None, description="The resource name of the entity.")
-    value: StrictStr = Field(..., description="value represents the value of the key value pair.")
-    environment: StrictStr = Field(..., description="the environment in which this tag will live.")
+    name: Optional[StrictStr] = Field(default=None, description="The resource name of the entity.")
+    value: StrictStr = Field(default=..., description="value represents the value of the key value pair.")
+    environment: StrictStr = Field(default=..., description="the environment in which this tag will live.")
     __properties = ["name", "value", "environment"]
 
     class Config:

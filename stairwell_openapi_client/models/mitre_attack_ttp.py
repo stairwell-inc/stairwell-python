@@ -25,8 +25,8 @@ class MitreAttackTTP(BaseModel):
     """
     MitreAttackTTP contains the MITRE signatures which were observed during detonation.  # noqa: E501
     """
-    ttp: Optional[StrictStr] = Field(None, description="TTP is a code indicating the signature which was observed. Code reference: https://attack.mitre.org/techniques/enterprise/")
-    signature: Optional[StrictStr] = Field(None, description="Signature is the name of the signature which was observed.")
+    ttp: Optional[StrictStr] = Field(default=None, description="TTP is a code indicating the signature which was observed. Code reference: https://attack.mitre.org/techniques/enterprise/")
+    signature: Optional[StrictStr] = Field(default=None, description="Signature is the name of the signature which was observed.")
     __properties = ["ttp", "signature"]
 
     class Config:

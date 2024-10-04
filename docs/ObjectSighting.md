@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **asset** | **str** | Asset resource name which the object was sighted on. | [optional] 
 **filename** | **str** | Name of file on disk. | [optional] 
 **filepath** | **str** | Path to file on disk. | [optional] 
+**asset_name** | **str** | Name of the asset. | [optional] 
+**parent_sha256** | **str** | Optional parent SHA265 if the object was packed. | [optional] 
 
 ## Example
 
@@ -26,7 +28,7 @@ print ObjectSighting.to_json()
 # convert the object into a dict
 object_sighting_dict = object_sighting_instance.to_dict()
 # create an instance of ObjectSighting from a dict
-object_sighting_form_dict = object_sighting.from_dict(object_sighting_dict)
+object_sighting_from_dict = ObjectSighting.from_dict(object_sighting_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,8 +26,8 @@ class ObjectSignature(BaseModel):
     """
     Contains all information known about an object's certificate based signature.  # noqa: E501
     """
-    x509_certificates: Optional[conlist(X509Certificate)] = Field(None, alias="x509Certificates", description="The x509 certificates embedded within the portable executable.")
-    pkcs7_verification_result: Optional[StrictStr] = Field(None, alias="pkcs7VerificationResult", description="Whether the x509 certificate chain is valid. This may be unknown if the pkcs7 package does not support the file's encryption scheme.")
+    x509_certificates: Optional[conlist(X509Certificate)] = Field(default=None, alias="x509Certificates", description="The x509 certificates embedded within the portable executable.")
+    pkcs7_verification_result: Optional[StrictStr] = Field(default=None, alias="pkcs7VerificationResult", description="Whether the x509 certificate chain is valid. This may be unknown if the pkcs7 package does not support the file's encryption scheme.")
     __properties = ["x509Certificates", "pkcs7VerificationResult"]
 
     @validator('pkcs7_verification_result')

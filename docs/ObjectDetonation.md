@@ -37,7 +37,7 @@ print ObjectDetonation.to_json()
 # convert the object into a dict
 object_detonation_dict = object_detonation_instance.to_dict()
 # create an instance of ObjectDetonation from a dict
-object_detonation_form_dict = object_detonation.from_dict(object_detonation_dict)
+object_detonation_from_dict = ObjectDetonation.from_dict(object_detonation_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

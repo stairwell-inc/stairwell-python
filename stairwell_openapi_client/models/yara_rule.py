@@ -26,13 +26,13 @@ class YaraRule(BaseModel):
     """
     YaraRule contains metadata and definition of a particular rule.  # noqa: E501
     """
-    name: Optional[StrictStr] = Field(None, description="The resource name of the rule.")
-    definition: StrictStr = Field(..., description="Definition of the rule.")
-    scan_warning: Optional[StrictStr] = Field(None, alias="scanWarning", description="Warning from a failed canary scan.")
-    state: Optional[StrictStr] = Field(None, description="Current scan inclusion state of rule.")
-    update_time: Optional[datetime] = Field(None, alias="updateTime", description="Timestamp at which the latest rule version was submitted.")
-    canary_scan_state: Optional[StrictStr] = Field(None, alias="canaryScanState", description="State from running this rule against known goodware.")
-    tags: Optional[conlist(Tag)] = Field(None, description="Tags associated with this yara rule.")
+    name: Optional[StrictStr] = Field(default=None, description="The resource name of the rule.")
+    definition: StrictStr = Field(default=..., description="Definition of the rule.")
+    scan_warning: Optional[StrictStr] = Field(default=None, alias="scanWarning", description="Warning from a failed canary scan.")
+    state: Optional[StrictStr] = Field(default=None, description="Current scan inclusion state of rule.")
+    update_time: Optional[datetime] = Field(default=None, alias="updateTime", description="Timestamp at which the latest rule version was submitted.")
+    canary_scan_state: Optional[StrictStr] = Field(default=None, alias="canaryScanState", description="State from running this rule against known goodware.")
+    tags: Optional[conlist(Tag)] = Field(default=None, description="Tags associated with this yara rule.")
     __properties = ["name", "definition", "scanWarning", "state", "updateTime", "canaryScanState", "tags"]
 
     @validator('state')

@@ -21,19 +21,17 @@ import json
 from typing import List, Optional
 from pydantic import BaseModel, Field, StrictStr, conlist
 from stairwell_openapi_client.models.dns_lookup_result import DNSLookupResult
-from stairwell_openapi_client.models.tag import Tag
 
 class HostnameMetadata(BaseModel):
     """
     HostnameMetadata contains metadata relating to a hostname.  # noqa: E501
     """
-    name: StrictStr = Field(..., description="The resource name of the hostname.")
-    hostname: StrictStr = Field(..., description="Hostname examples are - hurirk.net - www.tcoolonline.mobi - www.crackedmindstechnologies.com")
-    a_records: Optional[conlist(DNSLookupResult)] = Field(None, alias="aRecords", description="A records (IPv4).")
-    aaaa_records: Optional[conlist(DNSLookupResult)] = Field(None, alias="aaaaRecords", description="AAAA records (IPv6).")
-    mx_records: Optional[conlist(DNSLookupResult)] = Field(None, alias="mxRecords", description="MX records.")
-    tags: Optional[conlist(Tag)] = Field(None, description="Tags associated with this hostname.")
-    __properties = ["name", "hostname", "aRecords", "aaaaRecords", "mxRecords", "tags"]
+    name: StrictStr = Field(default=..., description="The resource name of the hostname.")
+    hostname: StrictStr = Field(default=..., description="Hostname examples are - hurirk.net - www.tcoolonline.mobi - www.crackedmindstechnologies.com")
+    a_records: Optional[conlist(DNSLookupResult)] = Field(default=None, alias="aRecords", description="A records (IPv4).")
+    aaaa_records: Optional[conlist(DNSLookupResult)] = Field(default=None, alias="aaaaRecords", description="AAAA records (IPv6).")
+    mx_records: Optional[conlist(DNSLookupResult)] = Field(default=None, alias="mxRecords", description="MX records.")
+    __properties = ["name", "hostname", "aRecords", "aaaaRecords", "mxRecords"]
 
     class Config:
         """Pydantic configuration"""
@@ -57,7 +55,6 @@ class HostnameMetadata(BaseModel):
         """Returns the dictionary representation of the model using alias"""
         _dict = self.dict(by_alias=True,
                           exclude={
-                            "tags",
                           },
                           exclude_none=True)
         # override the default output from pydantic by calling `to_dict()` of each item in a_records (list)
@@ -81,13 +78,6 @@ class HostnameMetadata(BaseModel):
                 if _item:
                     _items.append(_item.to_dict())
             _dict['mxRecords'] = _items
-        # override the default output from pydantic by calling `to_dict()` of each item in tags (list)
-        _items = []
-        if self.tags:
-            for _item in self.tags:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['tags'] = _items
         return _dict
 
     @classmethod
@@ -104,8 +94,7 @@ class HostnameMetadata(BaseModel):
             "hostname": obj.get("hostname"),
             "a_records": [DNSLookupResult.from_dict(_item) for _item in obj.get("aRecords")] if obj.get("aRecords") is not None else None,
             "aaaa_records": [DNSLookupResult.from_dict(_item) for _item in obj.get("aaaaRecords")] if obj.get("aaaaRecords") is not None else None,
-            "mx_records": [DNSLookupResult.from_dict(_item) for _item in obj.get("mxRecords")] if obj.get("mxRecords") is not None else None,
-            "tags": [Tag.from_dict(_item) for _item in obj.get("tags")] if obj.get("tags") is not None else None
+            "mx_records": [DNSLookupResult.from_dict(_item) for _item in obj.get("mxRecords")] if obj.get("mxRecords") is not None else None
         })
         return _obj
 

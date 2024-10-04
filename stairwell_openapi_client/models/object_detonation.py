@@ -29,22 +29,22 @@ class ObjectDetonation(BaseModel):
     """
     ObjectDetonation contains the status of the detonation analysis and if the analysis is complete, information collected while detonating the application.  # noqa: E501
     """
-    name: Optional[StrictStr] = Field(None, description="The resource name of the detonation.")
-    tags: Optional[conlist(StrictStr)] = Field(None, description="tags are tags extracted from Triage.")
-    overview: Optional[StrictStr] = Field(None, description="overview contains the overview provided by triage. https://pkg.go.dev/github.com/hatching/triage@v1.0.0/types#OverviewReport")
-    raw_triage_reports: Optional[Dict[str, StrictStr]] = Field(None, alias="rawTriageReports", description="raw triage reports correspond to each individual sandbox run of an object. https://pkg.go.dev/github.com/hatching/triage@v1.0.0/types#TriageReport")
-    sample_id: Optional[StrictStr] = Field(None, alias="sampleId", description="sample_id is the sampleID returned by Triage identifying the detonation.")
-    files: Optional[conlist(FileAction)] = Field(None, description="Files which were accessed during the detonation.")
-    registry_keys: Optional[conlist(RegistryKeyAction)] = Field(None, alias="registryKeys", description="Registry keys which were read/written/deleted.")
-    executed_commands: Optional[conlist(StrictStr)] = Field(None, alias="executedCommands", description="Commands which were executed during the detonation")
-    mutexes: Optional[conlist(StrictStr)] = Field(None, description="Mutexes which were used during the detonation.")
-    signatures: Optional[conlist(StrictStr)] = Field(None, description="Any malware signatures which are detected during detonation.")
-    mitre_attack_ttps: Optional[conlist(MitreAttackTTP)] = Field(None, alias="mitreAttackTtps", description="Any mitre signatures which are detected during detonation. Mitre TTPs reference: https://attack.mitre.org/techniques/enterprise/")
-    created_services: Optional[conlist(StrictStr)] = Field(None, alias="createdServices", description="List of created serviced during detonation.")
-    started_services: Optional[conlist(StrictStr)] = Field(None, alias="startedServices", description="List of started services during detonation.")
-    dropped_files: Optional[conlist(StrictStr)] = Field(None, alias="droppedFiles", description="Dropped child file hashes.")
-    in_memory_files: Optional[conlist(StrictStr)] = Field(None, alias="inMemoryFiles", description="In-memory child file hashes.")
-    detections: Optional[conlist(Detection)] = Field(None, description="Detections (malware family, yara, suricata...)")
+    name: Optional[StrictStr] = Field(default=None, description="The resource name of the detonation.")
+    tags: Optional[conlist(StrictStr)] = Field(default=None, description="tags are tags extracted from Triage.")
+    overview: Optional[StrictStr] = Field(default=None, description="overview contains the overview provided by triage. https://pkg.go.dev/github.com/hatching/triage@v1.0.0/types#OverviewReport")
+    raw_triage_reports: Optional[Dict[str, StrictStr]] = Field(default=None, alias="rawTriageReports", description="raw triage reports correspond to each individual sandbox run of an object. https://pkg.go.dev/github.com/hatching/triage@v1.0.0/types#TriageReport")
+    sample_id: Optional[StrictStr] = Field(default=None, alias="sampleId", description="sample_id is the sampleID returned by Triage identifying the detonation.")
+    files: Optional[conlist(FileAction)] = Field(default=None, description="Files which were accessed during the detonation.")
+    registry_keys: Optional[conlist(RegistryKeyAction)] = Field(default=None, alias="registryKeys", description="Registry keys which were read/written/deleted.")
+    executed_commands: Optional[conlist(StrictStr)] = Field(default=None, alias="executedCommands", description="Commands which were executed during the detonation")
+    mutexes: Optional[conlist(StrictStr)] = Field(default=None, description="Mutexes which were used during the detonation.")
+    signatures: Optional[conlist(StrictStr)] = Field(default=None, description="Any malware signatures which are detected during detonation.")
+    mitre_attack_ttps: Optional[conlist(MitreAttackTTP)] = Field(default=None, alias="mitreAttackTtps", description="Any mitre signatures which are detected during detonation. Mitre TTPs reference: https://attack.mitre.org/techniques/enterprise/")
+    created_services: Optional[conlist(StrictStr)] = Field(default=None, alias="createdServices", description="List of created serviced during detonation.")
+    started_services: Optional[conlist(StrictStr)] = Field(default=None, alias="startedServices", description="List of started services during detonation.")
+    dropped_files: Optional[conlist(StrictStr)] = Field(default=None, alias="droppedFiles", description="Dropped child file hashes.")
+    in_memory_files: Optional[conlist(StrictStr)] = Field(default=None, alias="inMemoryFiles", description="In-memory child file hashes.")
+    detections: Optional[conlist(Detection)] = Field(default=None, description="Detections (malware family, yara, suricata...)")
     __properties = ["name", "tags", "overview", "rawTriageReports", "sampleId", "files", "registryKeys", "executedCommands", "mutexes", "signatures", "mitreAttackTtps", "createdServices", "startedServices", "droppedFiles", "inMemoryFiles", "detections"]
 
     class Config:

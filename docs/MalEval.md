@@ -24,7 +24,7 @@ print MalEval.to_json()
 # convert the object into a dict
 mal_eval_dict = mal_eval_instance.to_dict()
 # create an instance of MalEval from a dict
-mal_eval_form_dict = mal_eval.from_dict(mal_eval_dict)
+mal_eval_from_dict = MalEval.from_dict(mal_eval_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **a_records** | [**List[DNSLookupResult]**](DNSLookupResult.md) | A records (IPv4). | [optional] 
 **aaaa_records** | [**List[DNSLookupResult]**](DNSLookupResult.md) | AAAA records (IPv6). | [optional] 
 **mx_records** | [**List[DNSLookupResult]**](DNSLookupResult.md) | MX records. | [optional] 
-**tags** | [**List[Tag]**](Tag.md) | Tags associated with this hostname. | [optional] [readonly] 
 
 ## Example
 
@@ -27,7 +26,7 @@ print HostnameMetadata.to_json()
 # convert the object into a dict
 hostname_metadata_dict = hostname_metadata_instance.to_dict()
 # create an instance of HostnameMetadata from a dict
-hostname_metadata_form_dict = hostname_metadata.from_dict(hostname_metadata_dict)
+hostname_metadata_from_dict = HostnameMetadata.from_dict(hostname_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ class TriggerObjectDetonationRequest(BaseModel):
     """
     Request for the TriggerObjectDetonationRequest RPC.  # noqa: E501
     """
-    parent: StrictStr = Field(..., description="The parent resource where this detonation will be triggered.")
+    parent: StrictStr = Field(default=..., description="The parent resource where this detonation will be triggered.")
     __properties = ["parent"]
 
     class Config:

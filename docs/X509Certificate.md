@@ -26,7 +26,7 @@ print X509Certificate.to_json()
 # convert the object into a dict
 x509_certificate_dict = x509_certificate_instance.to_dict()
 # create an instance of X509Certificate from a dict
-x509_certificate_form_dict = x509_certificate.from_dict(x509_certificate_dict)
+x509_certificate_from_dict = X509Certificate.from_dict(x509_certificate_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

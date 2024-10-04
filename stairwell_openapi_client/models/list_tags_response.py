@@ -26,8 +26,8 @@ class ListTagsResponse(BaseModel):
     """
     Response type for ListTags RPCs.  # noqa: E501
     """
-    tags: Optional[conlist(Tag)] = Field(None, description="The tags from the parent resource.")
-    next_page_token: Optional[StrictStr] = Field(None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
+    tags: Optional[conlist(Tag)] = Field(default=None, description="The tags from the parent resource.")
+    next_page_token: Optional[StrictStr] = Field(default=None, alias="nextPageToken", description="A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.")
     __properties = ["tags", "nextPageToken"]
 
     class Config:

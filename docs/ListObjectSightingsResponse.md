@@ -23,7 +23,7 @@ print ListObjectSightingsResponse.to_json()
 # convert the object into a dict
 list_object_sightings_response_dict = list_object_sightings_response_instance.to_dict()
 # create an instance of ListObjectSightingsResponse from a dict
-list_object_sightings_response_form_dict = list_object_sightings_response.from_dict(list_object_sightings_response_dict)
+list_object_sightings_response_from_dict = ListObjectSightingsResponse.from_dict(list_object_sightings_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

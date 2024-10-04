@@ -26,7 +26,7 @@ print NetworkIndicators.to_json()
 # convert the object into a dict
 network_indicators_dict = network_indicators_instance.to_dict()
 # create an instance of NetworkIndicators from a dict
-network_indicators_form_dict = network_indicators.from_dict(network_indicators_dict)
+network_indicators_from_dict = NetworkIndicators.from_dict(network_indicators_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

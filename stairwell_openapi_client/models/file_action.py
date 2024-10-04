@@ -25,8 +25,8 @@ class FileAction(BaseModel):
     """
     FileActions define the files which were accessed/modified during detonation  # noqa: E501
     """
-    filename: Optional[StrictStr] = Field(None, description="Path to the file")
-    action: Optional[StrictStr] = Field(None, description="Action performed on the file")
+    filename: Optional[StrictStr] = Field(default=None, description="Path to the file")
+    action: Optional[StrictStr] = Field(default=None, description="Action performed on the file")
     __properties = ["filename", "action"]
 
     @validator('action')

@@ -25,9 +25,9 @@ class DNSLookupResult(BaseModel):
     """
     This represents result of a DNS lookup.  # noqa: E501
     """
-    state: Optional[StrictStr] = Field(None, description="DNS lookup state")
-    address: Optional[StrictStr] = Field(None, description="Address the hostname resolved to at lookup time.")
-    lookup_time: Optional[datetime] = Field(None, alias="lookupTime", description="Time is the time the lookup was made.")
+    state: Optional[StrictStr] = Field(default=None, description="DNS lookup state")
+    address: Optional[StrictStr] = Field(default=None, description="Address the hostname resolved to at lookup time.")
+    lookup_time: Optional[datetime] = Field(default=None, alias="lookupTime", description="Time is the time the lookup was made.")
     __properties = ["state", "address", "lookupTime"]
 
     @validator('state')
